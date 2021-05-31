@@ -1,1 +1,1 @@
-# Libft -- Refactory of Lib C
+# Libft -- Lib C refactoring
