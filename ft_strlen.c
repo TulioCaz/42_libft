@@ -6,18 +6,18 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 18:04:49 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/05/27 18:10:23 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/01 17:16:57 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(char const *str)
 {
-	size_t	n;
+	size_t	i;
 
-	n = 0;
-	while (*str++)
-		n += 1;
-	return (n);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
