@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/01 14:33:20 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/01 14:56:55 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 char	*ft_strrchr(char *str, int c);
 char	*ft_strchr(char *str, int c);
+void	ft_putnbr_fd(int n, int fd);
 char	*ft_strdup(char *str);
 size_t	ft_strlen(char *str);
 int		ft_atoi(char *str);
