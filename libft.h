@@ -6,16 +6,21 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/02 19:04:39 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/02 19:54:54 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_substr(char const *s, unsigned int start, size_t len);
@@ -41,6 +46,7 @@ void	ft_putstr_fd(char *s, int fd);
 char	*ft_strrchr(char *str, int c);
 void	ft_putnbr_fd(int n, int fd);
 size_t	ft_strlen(char const *str);
+t_list	*ft_lstnew(void *content);
 char	*ft_strdup(char *str);
 int		ft_atoi(char *str);
 int		ft_isdigit(int c);
