@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/02 15:01:06 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/02 15:56:40 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,6 @@ int		ft_isupper(int c);
 int		ft_islower(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+char	*ft_itoa(int n);
 
 #endif
