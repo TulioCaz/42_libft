@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/02 15:56:40 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/02 19:04:39 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	*ft_memset(void *str, int c, size_t n);
 void	*ft_memchr(void *str, int c, size_t n);
 void	*ft_calloc(size_t nitens, size_t size);
 char	*ft_strchr(char const *str, int c);
+char	**ft_split(char const *s, char c);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_bzero(void *dst, size_t n);
 void	ft_putchar_fd(char c, int fd);
