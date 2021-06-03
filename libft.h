@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/03 09:18:00 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/03 09:57:42 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ char	*ft_strrchr(char *str, int c);
 void	ft_putnbr_fd(int n, int fd);
 size_t	ft_strlen(char const *str);
 t_list	*ft_lstnew(void *content);
+int		ft_lstsize(t_list *lst);
 char	*ft_strdup(char *str);
 int		ft_atoi(char *str);
 int		ft_isdigit(int c);
@@ -60,5 +61,6 @@ int		ft_islower(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_itoa(int n);
+
 
 #endif
