@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/02 19:54:54 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/03 09:18:00 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int		ft_strncmp(char *str1, char *str2, size_t n);
 void	*ft_memmove(void *dst, void *src, size_t n);
 char	*ft_strjoin(char const *s1, char const *s2);
 int		ft_memcmp(void *str1, void *str2, size_t n);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 void	*ft_memcpy(void *dst, void *str, size_t n);
 void	*ft_memset(void *str, int c, size_t n);
 void	*ft_memchr(void *str, int c, size_t n);
