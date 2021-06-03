@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 09:54:23 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/03 09:58:33 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/03 10:08:07 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	ft_lstsize(t_list *lst)
 {
 	int	i;
 
+	i = 0;
 	while (lst)
 	{
 		i++;
