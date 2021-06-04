@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/04 15:16:40 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/04 15:56:03 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	*ft_memccpy(void *dst, void *src, int c, size_t n);
