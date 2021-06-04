@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/03 18:13:03 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/04 14:42:10 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	*ft_memccpy(void *dst, void *src, int c, size_t n);
 size_t	ft_strlcat(char *dst, char const *src, size_t n);
 size_t	ft_strlcpy(char *dst, char const *src, size_t n);
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void*));
 char	*ft_strnstr(char *str1, char *str2, size_t n);
 char	*ft_strtrim(char const *s1, char const *set);
 int		ft_strncmp(char *str1, char *str2, size_t n);
