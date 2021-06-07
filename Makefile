@@ -6,7 +6,7 @@
 #    By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 20:54:18 by tcamargo          #+#    #+#              #
-#    Updated: 2021/06/07 15:20:57 by tcamargo         ###   ########.fr        #
+#    Updated: 2021/06/07 15:23:28 by tcamargo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ SRC=		ft_atoi.c		\
 			ft_isupper.c	\
 			ft_isprint.c	\
 			ft_memccpy.c	\
-			ft_memcpy.c	\
+			ft_memcpy.c		\
 			ft_memchr.c		\
 			ft_memcmp.c		\
 			ft_memmove.c	\
