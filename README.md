@@ -26,7 +26,7 @@ Outros comandos uteis;
 
 ### Funções de validação
 
-**ft_strncmp:** Compara os caracteres dos 'n' primeiros bytes de duas strings terminadas em nulo. Vai comparando caractere por caractere checado se são iguais, parando de comparar quando os caracteres se diferem, encontrando um byte nulo nas strings ou terminando de comparar o byte de numero 'n' das duas strings;
+**ft_strncmp:** Compara os caracteres dos 'n' primeiros bytes de duas strings terminadas em nulo. Vai comparando caractere por caractere checado se são iguais, parando de comparar quando os caracteres se diferem, encontrando um byte nulo nas strings ou terminando de comparar o byte de número 'n' das duas strings;
 
 - **Return:** int
   - =0 Se os 'n' primeiros bytes da string forem iguais;
@@ -60,7 +60,7 @@ Outros comandos uteis;
 
 - **Return:** int,  (1) se verdadeiro e (-1) se falso.
 
-**ft_isprint:** Valida se um caractere não é um comando e pode ser pintado em tela.
+**ft_isprint:** Valida se um caractere não é um comando e pode ser printado em tela.
 
 - **Return:** int,  (1) se verdadeiro e (-1) se falso.
 
@@ -71,6 +71,24 @@ Outros comandos uteis;
 **ft_islower:** Valida se um caractere é um alfabético em caixa baixa.
 
 - **Return:** int,  (1) se verdadeiro e (-1) se falso.
+
+### Funções de conversão
+
+**ft_atoi:** Converte dígitos dentro de uma cadeia de caracteres 'char' para um número do tipo inteiro 'int'.
+
+- **Return:** int, Retorna um número inteiro contido na cadeia de caractere.
+
+**ft_toupper:** Converte um caractere que está em caixa baixa para caixa alta.
+
+- **Return:** int, Retorna um número inteiro que representa o caractere convertido na tabela ascii.
+
+**ft_tolower:** Converte um caractere que está em caixa alta para caixa baixa.
+
+- **Return:** int, Retorna um número inteiro que representa o caractere convertido na tabela ascii.
+
+**ft_itoa:** Converte um número inteiro 'int' para uma cadeia de caracteres 'char'.
+
+- **Return:** char*, Retorna um ponteiro para um endereço na memória onde o número convertido para uma cadeia de caractere foi armazenado.
 
 ## Aprendizado
 
