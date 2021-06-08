@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/08 16:39:42 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/08 16:47:27 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 
 /**
- * @brief Valida se um caractere é um alphabético em caixa alta.
+ * @brief Valida se um caractere é um alfabético em caixa alta.
  * 
  * @param c Caractere à ser validado.
  * @return int | (1) se verdadeiro e (-1) se falso.
@@ -111,7 +111,7 @@ int		ft_isprint(int c);
 int		ft_isupper(int c);
 
 /**
- * @brief Valida se um caractere é um alphabético em caixa baixa.
+ * @brief Valida se um caractere é um alfabético em caixa baixa.
  * 
  * @param c Caractere à ser validado.
  * @return int | (1) se verdadeiro e (-1) se falso.

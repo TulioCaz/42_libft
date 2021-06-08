@@ -22,6 +22,56 @@ Outros comandos uteis;
 
 `make re` → recompila a biblioteca após fazer algumas mudança nos arquivos.
 
+## Manual
+
+### Funções de validação
+
+**ft_strncmp:** Compara os caracteres dos 'n' primeiros bytes de duas strings terminadas em nulo. Vai comparando caractere por caractere checado se são iguais, parando de comparar quando os caracteres se diferem, encontrando um byte nulo nas strings ou terminando de comparar o byte de numero 'n' das duas strings;
+
+- **Return:** int
+  - =0 Se os 'n' primeiros bytes da string forem iguais;
+  - <0 Se o primeiro caractere que não corresponde tem um valor menor em str1 do que str2;
+  - \>0 Se o primeiro caractere que não corresponde tem um valor maior em str1 do que str2;
+
+**ft_memcmp:** Compara os buffers de bytes binários de 'n' bytes. Vai comparando byte por byte checando se os valores são iguais, parando quando se diferem ou ao fim dos 'n' bytes.
+
+- **Return:** int
+  - =0 Se os 'n' primeiros bytes do buffer forem iguais;
+  - +1 Se o primeiro byte que difere tem um valor maior em buf1 do que em buf2;
+  - -1 Se o primeiro byte que difere tem um valor menor em buf1 do que em buf2;
+
+**ft_strlen:** Calcula o comprimento de uma string terminada em nulo, mas sem contar o byte nulo.
+
+- **Return:** size_t, Um número positivo indicando o tamanho da string.
+
+**ft_isdigit:** Valida se um caractere é um dígito numérico.
+
+- **Return:** int,  (1) se verdadeiro e (-1) se falso.
+
+**ft_isalpha:** Valida se um caractere é alfabetístico.
+
+- **Return:** int,  (1) se verdadeiro e (-1) se falso.
+
+**ft_isalnum:** Valida se um caractere é um digito numérico ou alfabético. 
+
+- **Return:** int,  (1) se verdadeiro e (-1) se falso.
+
+**ft_isascii:** Valida se um caractere esta contido na tabela ascii.
+
+- **Return:** int,  (1) se verdadeiro e (-1) se falso.
+
+**ft_isprint:** Valida se um caractere não é um comando e pode ser pintado em tela.
+
+- **Return:** int,  (1) se verdadeiro e (-1) se falso.
+
+**ft_isupper:** Valida se um caractere é um alfabético em caixa alta.
+
+- **Return:** int,  (1) se verdadeiro e (-1) se falso.
+
+**ft_islower:** Valida se um caractere é um alfabético em caixa baixa.
+
+- **Return:** int,  (1) se verdadeiro e (-1) se falso.
+
 ## Aprendizado
 
 Recriar uma biblioteca em uma determinada linguagem é um grande desafio. É disso que se trata realmente a libft.
