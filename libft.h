@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/08 16:31:20 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/08 16:37:52 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,8 +86,20 @@ int		ft_isalpha(int c);
  */
 int		ft_isalnum(int c);
 
+/**
+ * @brief Valida se um caractere esta contido na tabela ascii.
+ * 
+ * @param c Caractere à ser validado.
+ * @return int | (1) se verdadeiro e (-1) se falso.
+ */
 int		ft_isascii(int c);
 
+/**
+ * @brief Valida se um caractere não é um comando e pode ser pintado em tela.
+ * 
+ * @param c Caractere à ser validado.
+ * @return int | (1) se verdadeiro e (-1) se falso.
+ */
 int		ft_isprint(int c);
 
 int		ft_isupper(int c);
