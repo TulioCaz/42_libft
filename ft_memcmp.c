@@ -6,20 +6,20 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 17:26:28 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/05/27 17:51:23 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/08 15:40:25 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(void *str1, void *str2, size_t n)
+int	ft_memcmp(void *buf1, void *buf2, size_t n)
 {
 	unsigned char	*s1;
 	unsigned char	*s2;
 	int				charCompareStatus;
 
-	s1 = str1;
-	s2 = str2;
+	s1 = buf1;
+	s2 = buf2;
 	charCompareStatus = 0;
 	if (s1 == s2)
 	{
