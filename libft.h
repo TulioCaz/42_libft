@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/08 16:20:17 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/08 16:31:20 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,28 @@ int		ft_memcmp(void *buf1, void *buf2, size_t n);
  */
 size_t	ft_strlen(char const *str);
 
+/**
+ * @brief Valida se um caractere é um dígito numérico.
+ * 
+ * @param c Caractere à ser validado.
+ * @return int | (1) se verdadeiro e (-1) se falso.
+ */
 int		ft_isdigit(int c);
 
+/**
+ * @brief Valida se um caractere é alfabetístico.
+ * 
+ * @param c Caractere à ser validado.
+ * @return int | (1) se verdadeiro e (-1) se falso.
+ */
 int		ft_isalpha(int c);
 
+/**
+ * @brief Valida se um caractere é um digito numérico ou alfabético.
+ * 
+ * @param c Caractere à ser validado.
+ * @return int | (1) se verdadeiro e (-1) se falso.
+ */
 int		ft_isalnum(int c);
 
 int		ft_isascii(int c);
