@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/08 15:58:38 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/08 16:20:17 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,12 @@ int		ft_strncmp(char *str1, char *str2, size_t n);
  */
 int		ft_memcmp(void *buf1, void *buf2, size_t n);
 
-char	*ft_strchr(char const *str, int c);
-
-char	*ft_strrchr(char *str, int c);
-
+/**
+ * @brief Calcula o comprimento de uma string terminada em nulo, mas sem contar
+ * o byte nulo.
+ * @param str Aponta para o endereço onde a string esta armazenada.
+ * @return size_t | Um número positivo indicando o tamanho da string.
+ */
 size_t	ft_strlen(char const *str);
 
 int		ft_isdigit(int c);
@@ -90,6 +92,8 @@ char	*ft_strnstr(char *str1, char *str2, size_t n);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strjoin(char const *s1, char const *s2);
 void	*ft_memcpy(void *dst, void *str, size_t n);
+char	*ft_strrchr(char const *str, int c);
+char	*ft_strchr(char const *str, int c);
 char	**ft_split(char const *s, char c);
 char	*ft_strdup(char *str);
 
