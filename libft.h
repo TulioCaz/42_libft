@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/08 16:47:27 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/08 17:34:02 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typedef struct s_list
  * @brief Compara os caracteres dos 'n' primeiros bytes de duas strings
  * terminadas em nulo. Vai comparando caractere por caractere checado se são
  * iguais, parando de comparar quando os caracteres se diferem, encontrando um
- * byte nulo nas strings ou terminando de comparar o byte de numero 'n' das duas
+ * byte nulo nas strings ou terminando de comparar o byte de número 'n' das duas
  * strings;
  * @param str1 Aponta para o endereço de memória onde esta armazenada a primeira
  * string.
@@ -79,7 +79,7 @@ int		ft_isdigit(int c);
 int		ft_isalpha(int c);
 
 /**
- * @brief Valida se um caractere é um digito numérico ou alfabético.
+ * @brief Valida se um caractere é um dígito numérico ou alfabético.
  * 
  * @param c Caractere à ser validado.
  * @return int | (1) se verdadeiro e (-1) se falso.
@@ -118,10 +118,42 @@ int		ft_isupper(int c);
  */
 int		ft_islower(int c);
 
-// Convertion
+// Convertion Functions
+
+/**
+ * @brief Converte dígitos dentro de uma cadeia de caracteres 'char' para um
+ * número do tipo inteiro 'int'.
+ * 
+ * @param str Cadeia de caracteres à ser convertida.
+ * @return int | Retorna um número inteiro contido na cadeia de caractere.
+ */
 int		ft_atoi(char *str);
+
+/**
+ * @brief Converte um caractere que está em caixa baixa para caixa alta.
+ * 
+ * @param c Caractere a ser convertido.
+ * @return int | Retorna um número inteiro que representa o caractere convertido
+ * na tabela ascii.
+ */
 int		ft_toupper(int c);
+
+/**
+ * @brief Converte um caractere que está em caixa alta para caixa baixa.
+ * 
+ * @param c Caractere a ser convertido.
+ * @return int | Retorna um número inteiro que representa o caractere convertido
+ * na tabela ascii.
+ */
 int		ft_tolower(int c);
+
+/**
+ * @brief Converte um número inteiro 'int' para uma cadeia de caracteres 'char'.
+ * 
+ * @param n Número inteiro à ser convertido.
+ * @return char* | retorna um ponteiro para um endereço na memória onde o número
+ * convertido para uma cadeia de caractere foi armazenado.
+ */
 char	*ft_itoa(int n);
 
 // String Manipulate
