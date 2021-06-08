@@ -22,6 +22,13 @@ Outros comandos uteis;
 
 `make re` → recompila a biblioteca após fazer algumas mudança nos arquivos.
 
+## Aprendizado
+
+Recriar uma biblioteca em uma determinada linguagem é um grande desafio. É disso que se trata realmente a libft.
+
+- Saber como funciona uma biblioteca e como usá-la.
+- Saber como criar e estruturar qualquer biblioteca em C.
+
 ## Manual
 
 ### Funções de validação
@@ -52,7 +59,7 @@ Outros comandos uteis;
 
 - **Return:** int,  (1) se verdadeiro e (-1) se falso.
 
-**ft_isalnum:** Valida se um caractere é um digito numérico ou alfabético. 
+**ft_isalnum:** Valida se um caractere é um digito numérico ou alfabético.
 
 - **Return:** int,  (1) se verdadeiro e (-1) se falso.
 
@@ -90,12 +97,15 @@ Outros comandos uteis;
 
 - **Return:** char*, Retorna um ponteiro para um endereço na memória onde o número convertido para uma cadeia de caractere foi armazenado.
 
-## Aprendizado
+## Funções de escrita em arquivos
 
-Recriar uma biblioteca em uma determinada linguagem é um grande desafio. É disso que se trata realmente a libft.
+**ft_putendl_fd:** Passa a string fornecida como parâmetro para o File Descriptor indicado, com uma quebra de linha no final.
 
-- Saber como funciona uma biblioteca e como usá-la.
-- Saber como criar e estruturar qualquer biblioteca em C.
+**ft_putchar_fd:** Passa um caractere fornecido como parâmetro para o File Descriptor indicado.
+
+**ft_putstr_fd:** Passa a string fornecida como parâmetro para o File Descriptor indicado.
+
+**ft_putnbr_fd:** Passa o numero fornecido como parâmetro para o File Descriptor indicado.
 
 ## **License**
 

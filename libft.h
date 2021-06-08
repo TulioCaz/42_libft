@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/08 17:37:02 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/08 18:20:06 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -172,9 +172,41 @@ char	**ft_split(char const *s, char c);
 char	*ft_strdup(char *str);
 
 // File descriptor Manipulation
+/**
+ * @brief Passa a string fornecida como parâmetro para o File Descriptor
+ * indicado, com uma quebra de linha no final.
+ * 
+ * @param s Aponta para o endereço na memória onde a string está armazenada.
+ * @param fd Numero que indica o File Descriptor.
+ */
 void	ft_putendl_fd(char *s, int fd);
+
+/**
+ * @brief Passa um caractere fornecido como parâmetro para o File Descriptor
+ * indicado.
+ * 
+ * @param c Caractere à ser passado para file descriptor.
+ * @param fd Numero que indica o File Descriptor.
+ */
 void	ft_putchar_fd(char c, int fd);
+
+/**
+ * @brief Passa a string fornecida como parâmetro para o File Descriptor
+ * indicado.
+ * 
+ * @param s Aponta para o endereço na memória onde a string está armazenada.
+ * @param fd Numero que indica o File Descriptor.
+ */
 void	ft_putstr_fd(char *s, int fd);
+
+/**
+ * @brief Passa o numero fornecido como parâmetro para o File Descriptor
+ * indicado.
+ * 
+ * @param n Numero inteiro que será convertido cara caractere e passado para o
+ * file descriptor.
+ * @param fd Numero que indica o File Descriptor.
+ */
 void	ft_putnbr_fd(int n, int fd);
 
 // Memory Manipulaation
