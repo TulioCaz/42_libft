@@ -6,13 +6,13 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 15:39:43 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/05/27 15:57:43 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/09 16:11:38 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *dst, size_t n)
+void	ft_bzero(void *src, size_t n)
 {
-	ft_memset(dst, '\0', n);
+	ft_memset(src, '\0', n);
 }

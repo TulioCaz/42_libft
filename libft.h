@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/09 13:44:29 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/09 16:27:53 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -339,13 +339,96 @@ void	ft_putstr_fd(char *str, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 // Memory Manipulaation
+/**
+ * @brief Copia não mais que 'n' bytes do buffer 'src' para a área do buffer
+ * 'dst', parando quando o caractere 'c' é encontrado.
+ * 
+ * @param dst Aponta para o endereço de memória que será o destino do conteúdo
+ * copiado.
+ * @param src Aponta para o endereço de memória onde esta os bytes à serem
+ * copiados para área de memória do buffer 'dst'.
+ * @param c Caractere de terminação, numero inteiro que será convertido para um
+ * unsigned char.
+ * @param n Este é o numero máximo de bytes à serem copiados.
+ * @return void* | Retorna um ponteiro para o byte seguinte a 'c' se encontrado
+ * esse caractere nos 'n' primeiros bytes de 'src'. Ou retorna NULL se não
+ * encontrado nenhum caractere 'c'.
+ */
 void	*ft_memccpy(void *dst, void *src, int c, size_t n);
+
+/**
+ * @brief Copia 'n' bytes do buffer apontado por 'src' para o buffer apontado
+ * por 'dst', mas para blocos de memória sobrepostos, memmove() é mais seguro
+ * que memcpy().
+ * 
+ * @param dst Aponta para o buffer de destino para onde o conteúdo deve ser
+ * copiado.
+ * @param src Este é um ponteiro para um buffer onde está armazenado os bytes
+ * que devem ser copiados.
+ * @param n Este é o número de bytes que devem ser copiados.
+ * @return void* | Retorna um ponteiro para o buffer de destino 'dest', para onde os
+ * bytes foram copiados.
+ */
 void	*ft_memmove(void *dst, void *src, size_t n);
-void	*ft_memcpy(void *dst, void *str, size_t n);
-void	*ft_memset(void *str, int c, size_t n);
-void	*ft_memchr(void *str, int c, size_t n);
+
+/**
+ * @brief Copia 'n' bytes do buffer apontado por 'src' para dentro do buffer
+ * apontado por 'dst'.
+ * 
+ * @param dst Aponta para o buffer de destino para onde o conteúdo deve ser
+ * copiado.
+ * @param src Este é um ponteiro para um buffer onde está armazenado os bytes
+ * que devem ser copiados.
+ * @param n Este é o número de bytes que devem ser copiados.
+ * @return void* | Retorna um ponteiro para o buffer de destino 'dest', para onde os
+ * bytes foram copiados.
+ */
+void	*ft_memcpy(void *dst, void *src, size_t n);
+
+/**
+ * @brief Copia o caractere especificado em 'c' para os 'n' primeiros bytes do
+ * buffer apontados por 'src'.
+ * 
+ * @param src Aponta para o buffer onde os caracteres serão gravados.
+ * @param c Caractere que será copiado, numero inteiro que será convertido para
+ * um unsigned char.
+ * @param n Este é o número de bytes do buffer src.
+ * @return void* | Retorna um ponteiro para o primeiro byte do buffer 'src'.
+ */
+void	*ft_memset(void *src, int c, size_t n);
+
+/**
+ * @brief Procura a primeira ocorrência do caractere 'c' nos primeiros 'n' bytes
+ * do buffer apontado por 'src'.
+ * 
+ * @param src Aponta para o buffer onde a pesquisa será realizada.
+ * @param c Caractere a ser pesquisado, numero inteiro que será convertido para
+ * um unsigned char.
+ * @param n Este é o numero máximo de bytes à serem pesquisados no buffer 'src'.
+ * @return void* | Retorna um ponteiro para a primeira ocorrência de 'c' nos 'n'
+ * bytes de 'src'. Ou NULL se não encontrada nenhuma ocorrência de 'c'.
+ */
+void	*ft_memchr(void *src, int c, size_t n);
+
+/**
+ * @brief Aloca a memória solicitada, e retorna um ponteiro para o buffer
+ * alocado.
+ * 
+ * @param nitens Este é o número de elementos a serem alocados.
+ * @param size Este é o tamanho dos elementos.
+ * @return void* | Retorna um ponteiro para buffer alocado. Ou NULL se a
+ * alocação falhar.
+ */
 void	*ft_calloc(size_t nitens, size_t size);
-void	ft_bzero(void *dst, size_t n);
+
+/**
+ * @brief Define os 'n' primeiros bytes de um buffer como NULL.
+ * 
+ * @param src Aponta para o buffer onde está alocado a memória que qqueremos
+ * passar para NULL.
+ * @param n Este é o numero de bytes que queremos trocar os valores.
+ */
+void	ft_bzero(void *src, size_t n);
 
 // Bonus Functions -- Create and manipulate linked lists
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
