@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/09 16:27:53 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/09 19:49:53 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -431,14 +431,99 @@ void	*ft_calloc(size_t nitens, size_t size);
 void	ft_bzero(void *src, size_t n);
 
 // Bonus Functions -- Create and manipulate linked lists
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-void	ft_lstdelone(t_list *lst, void (*del)(void*));
-void	ft_lstclear(t_list **lst, void (*del)(void*));
-void	ft_lstadd_front(t_list **lst, t_list *new);
-void	ft_lstiter(t_list *lst, void (*f)(void *));
-void	ft_lstadd_back(t_list **lst, t_list *new);
+/**
+ * @brief Aloca memória para criação de uma estrutura de lista vinculada.
+ * Adiciona o conteúdo de 'content' à lista criada, e seta NULL ao próximo
+ * elemento em 'next'.
+ * 
+ * @param content Aponta para o buffer de memória onde está armazenado o
+ * conteúdo que será adicionado a lista criada.
+ * @return t_list* | Retorna um ponteiro para a estrutura 't_list' criada.
+ */
 t_list	*ft_lstnew(void *content);
+
+/**
+ * @brief Retorna o último elemento de uma lista vinculada.
+ * 
+ * @param lst Aponta para o buffer que armazena um elemento de uma lista.
+ * @return t_list* | Retorna um ponteiro para o buffer que armazena o último
+ * elemento da lista.
+ */
 t_list	*ft_lstlast(t_list *lst);
+
+/**
+ * @brief Conta o número de elemento em um lista.
+ * 
+ * @param lst Aponta para o buffer que armazena o primeiro elemento de uma
+ * lista.
+ * @return int | Retorna um número inteiro representando a quantidade de
+ * elementos presente na lista.
+ */
 int		ft_lstsize(t_list *lst);
+
+/**
+ * @brief Adiciona um novo elemento no inicio de uma lista.
+ * 
+ * @param lst Aponta para o buffer que armazena o primeiro elemento de uma
+ * lista.
+ * @param new Aponta para o buffer que armazena o elemento à ser adicionado
+ * a lista.
+ */
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
+/**
+ * @brief Adiciona um novo elemento no final de uma lista.
+ * 
+ * @param lst Aponta para o endereço do buffer que armazena a lista.
+ * @param new Aponta para o buffer que armazena o elemento à ser adicionado
+ * a lista.
+ */
+void	ft_lstadd_back(t_list **lst, t_list *new);
+
+/**
+ * @brief Itera a lista e aplica uma função passada como parâmetro para cada
+ * elemento da lista.
+ * 
+ * @param lst Aponta para o endereço do ponteiro para um elemento de uma lista.
+ * @param f Aponta para o endereço onde está armazenada a função à ser aplicada
+ * a função que será aplicada a cada elemento da lista.
+ */
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+
+/**
+ * @brief Recebe um elemento de uma lista e libera a memória do conteúdo do
+ * elemento usando a função passada pelo parâmetro 'del' e libera o elemento. E
+ * a memória do elemento seguinte não é liberado.
+ * 
+ * @param lst Aponta para o buffer que armazena um elemento de uma lista.
+ * @param del Aponta para o endereço onde está armazenada a função usada para
+ * liberar a memória do conteúdop do elemento passado.
+ */
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+
+/**
+ * @brief Deleta e libera o primeiro elemento de uma lista e todos os outros 
+ * sub-sequentes. E no final seta como NULL o ponteiro da lista.
+ * 
+ * @param lst Aponta para o buffer que armazena a lista.
+ * @param del Aponta para o endereço onde está armazenada a função usada para
+ * delletar e liberar a memória do conteúdo dos elementos da lista passada.
+ */
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+
+/**
+ * @brief Itera uma lista e aplica uma função para cada elemento dela. Criando
+ * uma nova lista como resultado das iterações. A função 'del' é usada para
+ * deletar e liberar a memória de um elemento caso necessário. 
+ * 
+ * @param lst Aponta para o buffer que armazena um elemento de uma lista.
+ * @param f Aponta para o endereço onde está armazenada a função à ser aplicada
+ * a função que será aplicada a cada elemento da lista.
+ * @param del  Aponta para o endereço onde está armazenada a função usada para
+ * liberar a memória do conteúdo de um elemento caso seja necessário.
+ * @return t_list* | Retorna uma nova lista criada a partir das iterações
+ * anteriores na lista original.
+ */
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

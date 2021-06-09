@@ -173,6 +173,32 @@ Recriar uma biblioteca em uma determinada linguagem é um grande desafio. É dis
 
 **ft_bzero:** Define os 'n' primeiros bytes de um buffer como NULL.
 
+## Funções Bônus: Criar e manipular listas vinculadas
+
+**ft_lstnew:** Aloca memória para criação de uma estrutura de lista vinculada. Adiciona o conteúdo de 'content' à lista criada, e seta NULL ao próximo elemento em 'next'.
+
+- **Return:** t_list*, Retorna um ponteiro para a estrutura 't_list' criada.
+
+**ft_lstlast:** Retorna o último elemento de uma lista vinculada.
+
+- **Return:** t_list*, Retorna um ponteiro para o buffer que armazena o último elemento da lista.
+
+**ft_lstsize:** Conta o número de elemento em um lista.
+
+**ft_lstadd_front:** Adiciona um novo elemento no inicio de uma lista.
+
+**ft_lstadd_back:** Adiciona um novo elemento no final de uma lista.
+
+**ft_lstiter:** Itera a lista e aplica uma função passada como parâmetro para cada elemento da lista.
+
+**ft_lstdelone:** Recebe um elemento de uma lista e libera a memória do conteúdo do elemento usando a função passada pelo parâmetro 'del' e libera o elemento. E a memória do elemento seguinte não é liberado.
+
+**ft_lstclear:** Deleta e libera o primeiro elemento de uma lista e todos os outros sub-sequentes. E no final seta como NULL o ponteiro da lista.
+
+**ft_lstmap:** Itera uma lista e aplica uma função para cada elemento dela. Criando uma nova lista como resultado das iterações. A função 'del' é usada para deletar e liberar a memória de um elemento caso necessário.
+
+- **Return:** t_list*,  Retorna uma nova lista criada a partir das iterações anteriores na lista original.
+
 ## **License**
 
 Everything in this repository is released under the [Unlicense](https://github.com/TulioCaz/42_libft/blob/master/LICENSE)
