@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/09 19:49:53 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/09 19:54:45 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -366,8 +366,8 @@ void	*ft_memccpy(void *dst, void *src, int c, size_t n);
  * @param src Este é um ponteiro para um buffer onde está armazenado os bytes
  * que devem ser copiados.
  * @param n Este é o número de bytes que devem ser copiados.
- * @return void* | Retorna um ponteiro para o buffer de destino 'dest', para onde os
- * bytes foram copiados.
+ * @return void* | Retorna um ponteiro para o buffer de destino 'dest', para
+ * onde os * bytes foram copiados.
  */
 void	*ft_memmove(void *dst, void *src, size_t n);
 
@@ -380,8 +380,8 @@ void	*ft_memmove(void *dst, void *src, size_t n);
  * @param src Este é um ponteiro para um buffer onde está armazenado os bytes
  * que devem ser copiados.
  * @param n Este é o número de bytes que devem ser copiados.
- * @return void* | Retorna um ponteiro para o buffer de destino 'dest', para onde os
- * bytes foram copiados.
+ * @return void* | Retorna um ponteiro para o buffer de destino 'dest', para
+ * onde os * bytes foram copiados.
  */
 void	*ft_memcpy(void *dst, void *src, size_t n);
 
