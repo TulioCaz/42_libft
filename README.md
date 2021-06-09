@@ -97,6 +97,44 @@ Recriar uma biblioteca em uma determinada linguagem é um grande desafio. É dis
 
 - **Return:** char*, Retorna um ponteiro para um endereço na memória onde o número convertido para uma cadeia de caractere foi armazenado.
 
+## Funções de manipulação de strings
+
+**ft_strmapi:** Aplica a uma função 'f', recebida por parâmetro, para cada caractere da string 's', criando uma nova string.
+
+- **Return:** char*,  Retorna um novo ponteiro para o endereço onde a nova string foi alocada. Retorna NULL se a alocação falhar.
+
+**ft_substr:** Cria uma string nova, que é uma sub-string formada à partir do índice start da string 'str' passada como parâmetro e tem o tamanho máximo de 'len'.
+
+- **Return:** char*, Retorna um novo ponteiro para o endereço onde a sub-string foi alocada. Retorna NULL se a alocação falhar.
+
+**ft_strlcat:**  Concatena duas strings, sem criar uma nova string. Ela pega o tamanho total do buffer, passado no parâmetro 'len', e garante a terminação NULL da string concatenada, desde que haja pelo menos um byte livre na string 'dst'. Observe também, que a função opera apenas em strings "C" verdadeiras. Isso significa que ambas as strings devem ser terminadas em um byte NULL.
+
+- **Return:** size_t, Retorna o tamanho da string que tentamos criar, ou seja, tamanho total da string 'dst' mais tamanho de 'src'.
+
+**ft_strlcpy:** Copia uma string de um endereço de memória para outro. Ela pega o tamanho total do buffer, passado no parâmetro 'len', e garante a terminação NULL da string copiada, desde que haja pelo menos um byte livre no buffer em 'dst'. Observe que um byte para o NUL deve ser incluído no tamanho. Observe também que a função opera apenas em strings "C" verdadeiras, ou seja 'src' deve ser terminado em NULL.
+
+- **Return:** size_t, Retorna o tamanho da string que será copiada.
+
+**ft_strnstr:** Localiza uma sub-string em uma string.
+
+- **Return:** char*, Retorna um ponteiro para o primeiro caractere dessa sub-string.
+
+**ft_strtrim:** Cria uma nova string eliminando os caracteres especificados em 'set' do inicio e do final da original passada como parâmetro.
+
+- **Return:** char*, Retorna um ponteiro para o endereço onde está armazenada a nova string criada.
+
+**ft_strjoin:** Concatena duas strings, criando uma novas string como resultado.
+
+- **Return:** char*, Retorna um ponteiro para o buffer onde a nova string será armazenada.
+
+**ft_split:** Cria um array de strings criado à partir de uma string dividida usando um delimitador especificado. O array criado é acompanhado de um ponteiro NULL na última posição.
+
+- **Return:** char**, Retorna um array de strings criado como resultado da divisão da string passada como parâmetro. Ou NULL se a alocação falhar.
+
+**ft_split:** Cria uma nova string que é uma cópia da string original. Essa nova string é um ponteiro para uma string terminada em NULL.
+
+- **Return:** char*, Retorna um ponteiro para o endereço onde a nova string duplicada está armazenada. Ou NULL se a alocação falhar.
+
 ## Funções de escrita em arquivos
 
 **ft_putendl_fd:** Passa a string fornecida como parâmetro para o File Descriptor indicado, com uma quebra de linha no final.
@@ -106,6 +144,34 @@ Recriar uma biblioteca em uma determinada linguagem é um grande desafio. É dis
 **ft_putstr_fd:** Passa a string fornecida como parâmetro para o File Descriptor indicado.
 
 **ft_putnbr_fd:** Passa o numero fornecido como parâmetro para o File Descriptor indicado.
+
+## Funções de manipulação de memória
+
+**ft_memccpy:** Copia não mais que 'n' bytes do buffer 'src' para a área do buffer 'dst', parando quando o caractere 'c' é encontrado.
+
+- **Return:** Retorna um ponteiro para o byte seguinte a 'c' se encontrado esse caractere nos 'n' primeiros bytes de 'src'. Ou retorna NULL se não encontrado nenhum caractere 'c'.
+
+**ft_memmove:** Copia 'n' bytes do buffer apontado por 'src' para o buffer apontado por 'dst', mas para blocos de memória sobrepostos, memmove() é mais seguro que memcpy().
+
+- **Return:** Retorna um ponteiro para o buffer de destino 'dest', para onde os bytes foram copiados.
+
+**ft_memcpy:** Copia 'n' bytes do buffer apontado por 'src' para dentro do buffer apontado por 'dst'.
+
+- **Return:** Retorna um ponteiro para o buffer de destino 'dest', para onde os bytes foram copiados.
+
+**ft_memset:** Copia o caractere especificado em 'c' para os 'n' primeiros bytes do buffer apontados por 'src'.
+
+- **Return:** Retorna um ponteiro para o primeiro byte do buffer 'src'.
+
+**ft_memchr:** Procura a primeira ocorrência do caractere 'c' nos primeiros 'n' bytes do buffer apontado por 'src'.
+
+- **Return:** Retorna um ponteiro para a primeira ocorrência de 'c' nos 'n' bytes de 'src'. Ou NULL se não encontrada nenhuma ocorrência de 'c'.
+
+**ft_calloc:** Aloca a memória solicitada, e retorna um ponteiro para o buffer alocado.
+
+- **Return:** Retorna um ponteiro para buffer alocado. Ou NULL se a alocação falhar.
+
+**ft_bzero:** Define os 'n' primeiros bytes de um buffer como NULL.
 
 ## **License**
 
