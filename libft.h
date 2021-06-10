@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:11:14 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/09 19:54:45 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/09 22:33:24 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ typedef struct s_list
  * str2; <0 Se o primeiro caractere que não corresponde tem um valor menor em 
  * str1 do que str2;
  **/
-int		ft_strncmp(char *str1, char *str2, size_t n);
+int		ft_strncmp(const char *str1, const char *str2, size_t n);
 
 /**
  * @brief Compara os buffers de bytes binários de 'n' bytes. Vai comparando byte
@@ -154,7 +154,7 @@ int		ft_islower(int c);
  * @param str Cadeia de caracteres à ser convertida.
  * @return int | Retorna um número inteiro contido na cadeia de caractere.
  */
-int		ft_atoi(char *str);
+int		ft_atoi(const char *str);
 
 /**
  * @brief Converte um caractere que está em caixa baixa para caixa alta.
@@ -251,7 +251,7 @@ size_t	ft_strlcpy(char *dst, char const *src, size_t len);
  * @return char* | Retorna um ponteiro para o primeiro caractere dessa
  * sub-string.
  */
-char	*ft_strnstr(char *str1, char *str2, size_t n);
+char	*ft_strnstr(const char *str1, const char *str2, size_t n);
 
 /**
  * @brief Cria uma nova string eliminando os caracteres especificados em 'set'
@@ -354,7 +354,7 @@ void	ft_putnbr_fd(int n, int fd);
  * esse caractere nos 'n' primeiros bytes de 'src'. Ou retorna NULL se não
  * encontrado nenhum caractere 'c'.
  */
-void	*ft_memccpy(void *dst, void *src, int c, size_t n);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
 /**
  * @brief Copia 'n' bytes do buffer apontado por 'src' para o buffer apontado
@@ -383,7 +383,7 @@ void	*ft_memmove(void *dst, void *src, size_t n);
  * @return void* | Retorna um ponteiro para o buffer de destino 'dest', para
  * onde os * bytes foram copiados.
  */
-void	*ft_memcpy(void *dst, void *src, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 /**
  * @brief Copia o caractere especificado em 'c' para os 'n' primeiros bytes do
@@ -408,7 +408,7 @@ void	*ft_memset(void *src, int c, size_t n);
  * @return void* | Retorna um ponteiro para a primeira ocorrência de 'c' nos 'n'
  * bytes de 'src'. Ou NULL se não encontrada nenhuma ocorrência de 'c'.
  */
-void	*ft_memchr(void *src, int c, size_t n);
+void	*ft_memchr(void const *src, int c, size_t n);
 
 /**
  * @brief Aloca a memória solicitada, e retorna um ponteiro para o buffer

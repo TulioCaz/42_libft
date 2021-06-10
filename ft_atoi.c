@@ -6,34 +6,36 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 17:07:37 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/05/28 18:02:31 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/09 22:36:52 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
-	int	n;
-	int	s;
+	char	*s;
+	int		n;
+	int		sign;
 
+	s = (char *) str;
 	n = 0;
-	s = 1;
-	while (*str == ' ' || *str == '\n' || *str == '\t' || *str == '\r'
-		|| *str == '\v' || *str == '\f')
-		str++;
-	if (*str == '-' && ft_isdigit(*(str + 1)))
+	sign = 1;
+	while (*s == ' ' || *s == '\n' || *s == '\t' || *s == '\r'
+		|| *s == '\v' || *s == '\f')
+		s++;
+	if (*s == '-' && ft_isdigit(*(s + 1)))
 	{
-		s = -1;
-		str++;
+		sign = -1;
+		s++;
 	}
-	else if (*str == '+' && ft_isdigit(*(str + 1)))
-		str++;
-	while (ft_isdigit(*str))
+	else if (*s == '+' && ft_isdigit(*(s + 1)))
+		s++;
+	while (ft_isdigit(*s))
 	{
 		n *= 10;
-		n += *str - '0';
-		str++;
+		n += *s - '0';
+		s++;
 	}
-	return (n * s);
+	return (n * sign);
 }

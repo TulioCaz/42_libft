@@ -6,20 +6,22 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 16:36:26 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/09 15:48:43 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/09 22:14:54 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(void *src, int c, size_t n)
+void	*ft_memchr(void const *src, int c, size_t n)
 {
-	char	*s;
+	unsigned char	*s;
+	unsigned char	c_char;
 
-	s = src;
+	s = (unsigned char *) src;
+	c_char = (unsigned char) c;
 	while (n--)
 	{
-		if (*s == c)
+		if (*s == c_char)
 			return ((void *)s);
 		s++;
 	}

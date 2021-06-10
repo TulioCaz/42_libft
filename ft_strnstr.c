@@ -6,30 +6,25 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 11:18:37 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/05/28 11:42:11 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/09 22:30:29 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(char *str1, char *str2, size_t n)
+char	*ft_strnstr(const char *str1, const char *str2, size_t n)
 {
-	int	i;
-	int	j;
+	size_t	len;
 
 	if (*str2 == '\0')
-		return (str1);
-	i = 0;
-	while (str1[i] != '\0' && i < (int) n)
+		return ((char *) str1);
+	len = ft_strlen(str2);
+	while (*str1 != '\0' && n >= len)
 	{
-		j = 0;
-		while (str2[j] == str1[i + j] && (i + j) < (int) n)
-		{
-			j++;
-			if (str2[j] == '\0')
-				return (&str1[i]);
-		}
-		i++;
+		if (ft_strncmp(str1, str2, len) == 0)
+			return ((char *)str1);
+		str1++;
+		n--;
 	}
 	return (NULL);
 }
