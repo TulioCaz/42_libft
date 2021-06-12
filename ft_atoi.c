@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 17:07:37 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/12 11:33:11 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/12 11:35:33 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_atoi(const char *str)
 	int		sign;
 
 	if (!str)
-		return (NULL);
+		return ;
 	s = (char *) str;
 	n = 0;
 	sign = 1;
