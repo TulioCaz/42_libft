@@ -25,7 +25,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	{
 		d[i] = s[i];
 		i++;
-		if (s[i - 1] == c)
+		if (s[i - 1] == (unsigned char)c)
 			return (dst + i);
 	}
 	return (NULL);
