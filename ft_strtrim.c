@@ -17,6 +17,8 @@ char	*ft_strtrim(char const *str, char const *set)
 	size_t	start;
 	char	*s;
 
+	if (!str)
+		return (NULL);
 	while (*str && ft_strchr(set, *str))
 		str++;
 	start = ft_strlen(str);
