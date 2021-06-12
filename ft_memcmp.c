@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-int	ft_memcmp(void *buf1, void *buf2, size_t n)
+int	ft_memcmp(const void *buf1,const void *buf2, size_t n)
 {
 	unsigned char	*s1;
 	unsigned char	*s2;
 	int				charCompareStatus;
 
-	s1 = buf1;
-	s2 = buf2;
+	s1 = (unsigned char *) buf1;
+	s2 = (unsigned char *) buf2;
 	charCompareStatus = 0;
 	if (s1 == s2)
 	{
