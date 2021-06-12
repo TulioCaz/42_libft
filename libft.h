@@ -54,7 +54,7 @@ int		ft_strncmp(const char *str1, const char *str2, size_t n);
  * +1 Se o primeiro byte que difere tem um valor maior em buf1 do que em buf2;
  * -1 Se o primeiro byte que difere tem um valor menor em buf1 do que em buf2;
  */
-int		ft_memcmp(const void *buf1,const void *buf2, size_t n);
+int		ft_memcmp(const void *buf1, const void *buf2, size_t n);
 
 /**
  * @brief Valida a ocorrência do caractere 'c' na string passada como parâmetro,
