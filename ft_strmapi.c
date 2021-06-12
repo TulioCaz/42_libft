@@ -17,7 +17,9 @@ char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*dest;
 
-	dest = ft_calloc((size_t) 1, ft_strlen(str));
+	if (!str)
+		return (NULL);
+	dest = ft_calloc(sizeof(char), (ft_strlen(str) + 1));
 	if (!dest)
 		return (NULL);
 	i = 0;
@@ -26,5 +28,6 @@ char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 		dest[i] = f(i, str[i]);
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
