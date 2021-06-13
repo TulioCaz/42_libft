@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 18:30:00 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/02 19:32:53 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/13 11:23:54 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	scpy_start_ptr = scpy;
 	n_words = ft_count_wrd(scpy, c);
-	splited = ft_calloc(sizeof(char *), (n_words + 1));
+	splited = (char **)ft_calloc(sizeof(char *), (n_words + 1));
 	if (!splited)
 		return (NULL);
 	ft_build_words(n_words, splited, scpy, c);
