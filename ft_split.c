@@ -6,7 +6,7 @@
 /*   By: tcamargo <tcamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 18:30:00 by tcamargo          #+#    #+#             */
-/*   Updated: 2021/06/13 11:23:54 by tcamargo         ###   ########.fr       */
+/*   Updated: 2021/06/15 17:13:29 by tcamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ static int	ft_count_wrd(char *str, char c)
 
 	i = 0;
 	j = 0;
-	while (str[i] != '\0' && ft_strchr(str + i, c) != NULL)
+	while (str[i] && ft_strchr(str + i, c) != NULL)
 	{
-		if (i > 1 && str[i + 1] != c && str[i] == c)
+		if (i >= 1 && str[i + 1] != c && str[i] == c)
 			j++;
 		i++;
 	}
@@ -59,10 +59,13 @@ char	**ft_split(char const *s, char c)
 	char	*scpy_start_ptr;
 	int		n_words;
 	char	**splited;
+	char	set[2];
 
+	set[0] = c;
+	set[1] = '\0';
 	if (!s)
 		return (NULL);
-	scpy = ft_strtrim(s, &c);
+	scpy = ft_strtrim(s, set);
 	if (!scpy)
 		return (NULL);
 	scpy_start_ptr = scpy;
